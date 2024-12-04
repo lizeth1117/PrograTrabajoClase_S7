@@ -10,12 +10,16 @@ package progratrabajo_s9_veterinaria;
  */
 public class caja extends servicios {
     String listacostos="";
-    public  String listacostos() {
+    public  void listacostos() {
         listacostos=(listacostos+"tiposervicio= " + tiposervicio +"...."
                 +costoservicio+ "\nAnimal= " + animal +"...."+costoanimal+
                 "\nTamanio= " + tamanio +"...."+costotamanio+"\n");
-             return listacostos;
     }
+        
+    public void borrarlista(){
+listacostos="";
+}
+  
         
    public void cerrarcaja(double totalcaja){
         
@@ -32,6 +36,6 @@ public class caja extends servicios {
    }
    public void mostrarfactura(double cuenta){
        System.out.println("\n**********FACTURA***********\n"+
-              listacostos()+"\nEl total de su factura es "+cuenta);
+              listacostos+"\nEl total de su factura es "+cuenta);
     }
 }

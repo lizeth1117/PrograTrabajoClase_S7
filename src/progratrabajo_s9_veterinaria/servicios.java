@@ -27,7 +27,7 @@ public class servicios {
         switch(opcionservicio){
 
             case 1:
-                this.tiposervicio = "baño";
+                this.tiposervicio = "banio";
                 this.costoservicio=450;
                 precioservicio+=costoservicio;
                 banios++;
@@ -40,7 +40,7 @@ public class servicios {
                 break;
             case 3:    
                     
-                this.tiposervicio = "Baños y Servicios medicos";
+                this.tiposervicio = "Banios y Servicios medicos";
                 this.costoservicio=600;
                 precioservicio+=costoservicio;
                 banioymed++;
@@ -65,27 +65,32 @@ public class servicios {
                 gatosatendidos++;
                 break;
         }
-       switch(opciontamanio){
-            case 1:
-                this.tamanio = "grande";
-                this.costotamanio=100;
-                precioservicio+=costotamanio;
-                perrospequenios++;
+       if(this.animal.equals("perro")) {
+           switch(opciontamanio){
                
-                break;
-            case 2:
-                this.tamanio = "mediano";
-                this.costotamanio=75;
-                precioservicio+=costotamanio;
-                perrosmedianos++;
-                break;
-            case 3:
-                this.tamanio = "pequeño";
-                this.costotamanio=50;
-                precioservicio+=costotamanio;
-                perrosgrandes++;
-                break;         
-    }
+               case 1:
+                   this.tamanio = "grande";
+                   this.costotamanio=100;
+                   precioservicio+=costotamanio;
+                   perrospequenios++;
+                   
+                   break;
+               case 2:
+                   this.tamanio = "mediano";
+                   this.costotamanio=75;
+                   precioservicio+=costotamanio;
+                   perrosmedianos++;
+                   break;
+               case 3:
+                   this.tamanio = "pequeño";
+                   this.costotamanio=50;
+                   precioservicio+=costotamanio;
+                   perrosgrandes++;
+                   break;
+           }   }
+       else{ this.tamanio=null;
+       this.costotamanio=0;}
+       
     return precioservicio;
 
     }

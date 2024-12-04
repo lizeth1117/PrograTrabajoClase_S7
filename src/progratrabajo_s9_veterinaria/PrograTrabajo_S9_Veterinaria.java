@@ -27,6 +27,7 @@ public class PrograTrabajo_S9_Veterinaria {
     int continuarcompra, opciontamanioperro=0, nuevafactura;
     caja c=new caja();  // variable de instancia aclase servicios y caja  
         do{
+            c.borrarlista();
             do {
             System.out.println("Bienvenido a la veterinaria Nuestro Esfuerzo\n"
                     + "Seleccione su tipo de atencion\n"
@@ -44,7 +45,7 @@ public class PrograTrabajo_S9_Veterinaria {
                     System.out.println("Que tamanio de perro?");
                     System.out.println("1. Grande (Lps. 100)");
                     System.out.println("2. Mediano(Lps. 75)");
-                    System.out.println("2. Pequenio(Lps. 50)");
+                    System.out.println("3. Pequenio(Lps. 50)");
                     opciontamanioperro = sc.nextInt();
                 }
           precioservicio=c.calcularprecios(opcionservicio, opcionanim, opciontamanioperro);// uso del metodo calcularprecios
